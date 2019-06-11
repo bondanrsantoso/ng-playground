@@ -11,7 +11,11 @@ const appRoutes: Routes = [
   {
     path: "berita",
     component: BeritaComponent
-  }
+  },
+  {
+    path: "berita/list",
+    component: ListBeritaComponent
+  },
 ]
 
 @NgModule({
@@ -22,7 +26,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes) 
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

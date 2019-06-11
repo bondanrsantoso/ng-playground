@@ -1,1 +1,8 @@
 <h2> Berita </h2>
+
+<ul>
+  <li *ngFor="let berita of beritaList">
+    <h4>{{berita.title}}</h4>
+    <p>{{berita.article}}</p>
+  </li>
+</ul>

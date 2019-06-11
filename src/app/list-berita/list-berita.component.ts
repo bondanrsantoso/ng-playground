@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { generateListBerita } from "./beritaRandom";
 
 @Component({
   selector: 'app-list-berita',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListBeritaComponent implements OnInit {
 
+  beritaList: any;
   constructor() { }
 
   ngOnInit() {
+    this.beritaList = generateListBerita(20);
   }
 
 }
