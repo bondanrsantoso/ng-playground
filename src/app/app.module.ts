@@ -6,6 +6,7 @@ import { ListBeritaComponent } from './list-berita/list-berita.component';
 import { BeritaComponent } from './berita/berita.component';
 
 import { RouterModule, Routes } from "@angular/router";
+import { BeritaAboutComponent } from './berita-about/berita-about.component';
 
 const appRoutes: Routes = [
   {
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ListBeritaComponent,
-    BeritaComponent
+    BeritaComponent,
+    BeritaAboutComponent
   ],
   imports: [
     BrowserModule,

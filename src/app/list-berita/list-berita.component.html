@@ -1,8 +1,28 @@
-<h2> Berita </h2>
+<h2>List Berita</h2>
 
-<ul>
-  <li *ngFor="let berita of beritaList">
-    <h4>{{berita.title}}</h4>
-    <p>{{berita.article}}</p>
+<ol>
+  <li *ngFor="let berita of daftarBerita">
+    <h2>{{ berita.judul }}</h2>
+    <ul *ngIf="berita.kategori.length > 1">
+      <li *ngFor="let kategori of berita.kategori">
+        {{ kategori }}
+      </li>
+    </ul>
+    <p *ngIf="berita.kategori.length <= 1">
+      {{ berita.kategori }}
+    </p>
+    <p>{{ berita.konten }}</p>
   </li>
-</ul>
+</ol>
+
+<!--
+  Buat daftar berita dengan ketentuan sebagai berikut:
+  1. Daftar berita merupakan Ordered List
+  2. Setiap berita ditampung dalam satu elemen li
+  3. Judul berita ditampilkan sebagai Heading 2
+  4. Konten berita ditampilkan sebagai Paragraf
+  5. Kategori berita ditampilkan dengan ketentuan berikut:
+    a. Apabila berita memiliki lebih dari 1 kategori, tampilkan sebagai list
+    b. sebaliknya, tampilkan sebagai paragraf
+    c. Apabila ditampilkan sebagai list, gunakan Unordered List
+ -->
